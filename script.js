@@ -21,23 +21,23 @@ let city = argv.c || 'Stockholm';
 var url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`
 //-----------------------------------------------------------------------------------------------
 //Hämtar form
-app.get('/weather', function(request, response){
-	return response.render('get-form')
+app.get('/weather', function(req, res){
+	return res.render('get-form')
 });
 //---------------------------------------------------------------------------------------------
 //Hämtar värde från api key och skriver ut 
-app.get('/getsubmit', function(request, response){
-request(url, function (err, response, body){
+// app.get('/getsubmit', function(req, res){
+request(url, function (err, res, body){
 	if(err){
 		console.log('error:', error);
 	} else {
 		var weather = JSON.parse(body)
 		var message = `Det är ${weather.main.temp} grader i ${weather.name}!`;
 		console.log(message);		
-		response.send(message);
+		res.send(message);
 	}
 });
-});
+
 
 //-----------------------------------------------------------------------------------------
 
