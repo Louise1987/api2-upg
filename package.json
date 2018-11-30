@@ -1,22 +1,29 @@
 {
   "name": "api2-upg",
   "version": "1.0.0",
-  "description": "",
+  "description": "api2",
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "api2-upg"
+    "url": "git+https://github.com/Louise1987/api2-upg.git"
   },
   "keywords": [
-    "api2"
+    "API2"
   ],
   "author": "Louise",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Louise1987/api2-upg/issues"
+  },
+  "homepage": "https://github.com/Louise1987/api2-upg#readme",
   "dependencies": {
-    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "install": "^0.12.2",
+    "pug": "^2.0.3",
     "request": "^2.88.0",
     "yargs": "^12.0.5"
   }
