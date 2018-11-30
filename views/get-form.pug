@@ -1,7 +1,8 @@
 extends index.pug
 
 block content
-  h1 Vad blir det för väder?
-  form(action="/getsubmit")
-    input(type="text", name="key")
-    input(type="submit")
+    body
+        h1 Vad blir det för väder
+    form(action="/getsubmit")
+      input(type="text", name="key")
+      input(type="submit", name="data")
