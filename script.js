@@ -2,11 +2,11 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
-
+//------------------------------------------------------------------------------------------------------------------------------------------------------
 //Hämtar api key
 var request = require('request');
 var argv = require('yargs').argv;
-
+//-------------------------------------------------------------------------------------------------------------------------------------------------------
 // css mapp
 app.use(express.static('public')); 
 //--------------------------------------------------------------------------------------------------------------------------------------------------
@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 //-------------------------------------------------------------------------------------------
 //Api key
 var apiKey = '66cf27da781d9551f542dd262827e6a8';
-let city = argv.c || 'Stockholm';
+let city = argv.c || 'New York';
 var url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`
 //-----------------------------------------------------------------------------------------------
 //Hämtar form
@@ -26,8 +26,8 @@ app.get('/weather', function(req, res){
 });
 //---------------------------------------------------------------------------------------------
 //Hämtar värde från api key och skriver ut 
-// app.get('/getsubmit', function(req, res){
-request(url, function (err, res, body){
+ app.get('/getsubmit', function(req, res){
+request(url, function (err, response, body){
 	if(err){
 		console.log('error:', error);
 	} else {
@@ -37,8 +37,7 @@ request(url, function (err, res, body){
 		res.send(message);
 	}
 });
-
-
+ });
 //-----------------------------------------------------------------------------------------
 
 
