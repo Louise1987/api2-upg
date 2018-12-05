@@ -3,8 +3,20 @@
  head
   meta(charset="UTF-8")
   link(rel="stylesheet", href="style.css")
+  link(href='https://fonts.googleapis.com/css?family=Gamja+Flower|Rakkas', rel='stylesheet')
+  script(src='script.js')
   title Api
  body
-  block content
+ h1 Vad blir det för väder?
+ .container
+    .sunny
+    .cloudy
+    .rainy
+    .snowy
+    .rainbow
+    .starry
+    .stormy
+ include get-form.pug
 
- 
+
+  
