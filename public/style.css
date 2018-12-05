@@ -1,6 +1,7 @@
-body{
-	background-color:rgb(222, 238, 247);
-}
+	 body{
+  background-color:rgb(222, 238, 247);
+	background-image: url("Weather-Blog-Image.jpg");
+} 
 
 input:invalid {
   border: 2px dashed red;
